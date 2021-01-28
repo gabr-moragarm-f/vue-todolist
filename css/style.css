@@ -6,6 +6,16 @@
 }
 
 body{
+  color: #001533;
+  font-family: 'Roboto', sans-serif;
+}
+
+ul{
+  padding: none
+}
+
+li{
+  list-style: none;
 }
 
 .wrapper{
@@ -39,7 +49,12 @@ nav > *{
 nav > input{
   width: 80%;
   height: 60px;
+  border: solid #001533;
   background-color: #00E165;
+}
+
+nav > input::placeholder{
+  color: rgba(0, 21, 51, 0.6);
 }
 
 nav > input:focus{
@@ -52,10 +67,23 @@ nav > button{
   background-color: #001533;
   border: solid #001533;
   color: #fff;
+  outline:none
 }
 
-nav > button{
-  background-color: #001533;
-  border: solid #001533;
-  color: #fff;
+nav > button:active{
+  background-color: #fff;
+  color: #001533;
+}
+
+.to-do-list-box{
+  background-color: #F5F7F7;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.to-do-list-box > ul > li{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 21, 51, 0.5);
+  padding: 15px;
 }

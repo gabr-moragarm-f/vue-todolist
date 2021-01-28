@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <title></title>
-  </head>
-  <body>
-    <div id="root">
-      <div class="wrapper">
-        <div class="logo">
-          <img src="img/logo.png" alt="Boolean logo">
-        </div>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <title></title>
+</head>
+<body>
+  <div id="root">
+    <div class="wrapper">
+      <div class="logo">
+        <img src="img/logo.png" alt="Boolean logo">
+      </div>
+      
+      <nav>
+        <input v-on:keyup.enter="pushList" type="text" v-model="input" placeholder="Nuovo Todo">
 
-        <nav>
-          <input v-on:keyup.enter="pushList" type="text" v-model="input" placeholder="Nome Todo">
+        <button @click="pushList" type="button" name="button">Aggiungi</button>
+      </nav>
 
-          <button @click="pushList" type="button" name="button">Aggiungi</button>
-        </nav>
+      <div class="to-do-list-box">
+        <ul>
+          <li v-for="(item, index) in toDoList">
+            {{item}}
 
-        <div class="to-do-list-box">
-          <ul>
-            <li v-for="(item, index) in toDoList">
-              {{item}}
-
-              <div @click="deleteFromList(index)" class="btn delete">
-                <i class="fas fa-times"></i>
-              </div>
-            </li>
-          </ul>
-        </div>
+            <div @click="deleteFromList(index)" class="btn delete">
+              <i class="fas fa-times"></i>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
-    <script src="js/script.js" charset="utf-8"></script>
-  </body>
+  </div>
+  <script src="js/script.js" charset="utf-8"></script>
+</body>
 </html>
