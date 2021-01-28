@@ -1,0 +1,61 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 27px;
+}
+
+body{
+}
+
+.wrapper{
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.logo{
+  width: 80%;
+  margin: 15px auto;
+}
+
+.logo > img{
+  width: 100%;
+}
+
+nav{
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav > *{
+  border-radius: 10px;
+  padding: 15px;
+}
+
+nav > input{
+  width: 80%;
+  height: 60px;
+  background-color: #00E165;
+}
+
+nav > input:focus{
+  border-radius: 10px;
+  background-color: #fff;
+  outline:none
+}
+
+nav > button{
+  background-color: #001533;
+  border: solid #001533;
+  color: #fff;
+}
+
+nav > button{
+  background-color: #001533;
+  border: solid #001533;
+  color: #fff;
+}
